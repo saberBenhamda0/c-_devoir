@@ -36,17 +36,36 @@ class NumberComplexe {
     }
 
         void display () { 
-        cout << " after operation the real part :  " << real ;
-        cout << " and imaginary is : " << imaginary<< endl;
+        cout << "" << real ;
+        cout << " +(i" << imaginary<< ")" <<  endl;
     };
 };
 
 
 int main() { 
 
-    NumberComplexe n1(5, 10);
-    NumberComplexe n2(15, 25);
+    float first_real;
+    float first_imaginary;
+    float second_real;
+    float second_imaginary;
+
+    cout << "entre the real value of the first  complexe number : ";
+    cin >> first_real;
+
+    cout << "entre the imaginary value of the first complexe number : ";
+    cin >> first_imaginary;
+
+    cout << "entre the real value of the second complexe number : ";
+    cin >> second_real;
+
+    cout << "entre the imaginary value of the second complexe number : ";
+    cin >> second_imaginary;
+
+
+    NumberComplexe n1(first_real, first_imaginary);
+    NumberComplexe n2(second_real, second_imaginary);
     NumberComplexe result(0, 0);
+
 
     int choice=0;
 
