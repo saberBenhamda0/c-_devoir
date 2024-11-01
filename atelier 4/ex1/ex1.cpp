@@ -74,7 +74,6 @@ int main() {
     cout << " 3-multiply" << endl;
     cout << " 4-devision" << endl;
     cout << " 5-compare" << endl;
-    cout << " 6-display" << endl;
     
     while (choice>6 || choice<1)
     {
@@ -85,15 +84,19 @@ int main() {
     switch (choice) { 
         case 1 :
             result = n1.addition(n2);
+            result.display();
             break;
         case 2 :
             result = n1.substract(n2);
+            result.display();
             break;
         case 3 :
             result = n1.multiply(n2);
+            result.display();
             break;
         case 4 :
             result = n1.devision(n2);
+            result.display();
             break;
         case 5 :
             n1.equality(n2);
@@ -101,7 +104,6 @@ int main() {
         case 6 :
             break;
     }
-    result.display();
 
     return 0;
 }

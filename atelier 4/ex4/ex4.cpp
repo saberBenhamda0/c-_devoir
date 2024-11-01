@@ -41,7 +41,10 @@ class Vecteur3d {
         float term1 = pow(x, 2) +  pow(y, 2) + pow(z, 2);
         float term2 = pow(other.x, 2) +  pow(other.y, 2) + pow(other.z, 2);
 
-        bool result = term1 > term2 ? true : false;
+        term1 = pow(term1, 0.5);
+        term2 = pow(term2, 0.5);
+
+        bool result = term1 > term2;
 
         if (result) { 
             cout << "the first vector is bigger" << endl;
@@ -49,11 +52,11 @@ class Vecteur3d {
         }
 
         else if(!result) { 
-        cout << "the first vector is bigger" << endl; 
+        cout << "the second vector is bigger" << endl; 
             return term2; 
         }
 
-    };
+    }
     
 };
 
