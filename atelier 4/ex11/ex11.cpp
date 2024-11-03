@@ -4,10 +4,9 @@
 using namespace std;
 
 class Traitement {
-    private:
+    public:
     vector<int> numbers;
 
-    public:
     void initialise() {
         int index = 15;
         int n;
@@ -33,14 +32,31 @@ class Traitement {
         show(n-1);
     }
 
+    friend double moyene(Traitement){}
+
+    friend double median(){}
 
 };
+
+double moyen(Traitement t1) { 
+
+        int somme=0;
+        for(int i = 0; i < t1.numbers.size(); i++){
+            somme += t1.numbers[i];
+        }
+
+        return somme / t1.numbers.size();
+}
 
 int main() { 
     Traitement t1;
 
     t1.initialise();
     t1.show(14);
+
+
+
+    cout << "the moyen is  : " << moyene(t1);
 
     return 0;
 }
