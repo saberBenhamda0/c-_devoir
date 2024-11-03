@@ -101,8 +101,6 @@ int main() {
         case 5 :
             n1.equality(n2);
             break;
-        case 6 :
-            break;
     }
 
     return 0;
